@@ -1,36 +1,24 @@
 using System;
+using System.Xml.Schema;
 
-public class Fraction
+class Program
 {
-    private int _top;
-    private int _bottom;
-
-    public Fraction()
+    static void Main(string[] args)
     {
-        _top = 1;
-        _bottom = 1;
-    }
+        Fraction f1 = new Fraction(1);
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimaValue());
 
-    public Fraction(int wholeNumber)
-    {
-        _top = wholeNumber;
-        _bottom = 1;
-    }
+        Fraction f2 = new Fraction(5);
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f2.GetDecimaValue());
 
-    public Fraction(int top, int bottom)
-    {
-        _top = top;
-        _bottom = bottom;
-    }
+        Fraction f3 = new Fraction(3, 4);
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimaValue());
 
-    public string GetFractionString()
-    {
-        string text = $"{_top}/{_bottom}";
-        return text;
-    }
-
-    public double GetDecimaValue()
-    {
-        return (double)_top / (double)_bottom;
+        Fraction f4 = new Fraction(1, 3);
+        Console.WriteLine(f4.GetFractionString());
+        Console.WriteLine(f4.GetDecimaValue());
     }
 }
