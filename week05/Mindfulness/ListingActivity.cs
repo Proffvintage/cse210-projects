@@ -5,10 +5,10 @@ public class ListingActivity : Activity
 {
     private List<string> _prompts = new List<string>
     {
-        "Who are people that you appreciate?",
-        "What are personal strengths of yours?",
-        "Who are people that you have helped this week?",
-        "When have you felt peace this month?",
+        "Who are the people that you appreciate?",
+        "What are the personal strengths of yours?",
+        "Who are the people that you have helped this week?",
+        "When have you felt at peace this month?",
         "Who are some of your personal heroes?"
     };
 
@@ -32,7 +32,7 @@ public class ListingActivity : Activity
         Console.WriteLine();
 
         Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("(Write one per line. Press Enter after each. Stop when time runs out.)");
+        Console.WriteLine("(Write one per line. Press Enter after each. Stop when the timer runs out.)");
         Console.ResetColor();
 
         List<string> items = new List<string>();
